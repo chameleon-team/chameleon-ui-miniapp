@@ -1,0 +1,101 @@
+<template>
+  <navigator
+    open-type="{{ openType }}"
+    style="{{ cstyle }}"
+    hover-class="{{ hoverClass }}"
+    hover-start-time="{{ hoverStartTime }}"
+    hover-stay-time="{{ hoverStayTime }}"
+    app-id="{{ appId }}"
+    path="{{ path }}"
+    extra-data="{{ extraData }}"
+    >
+  </navigator>
+</template>
+
+<script>
+
+class Navigator implements NavigatorInterface {
+  props = {
+    openType: {
+      type: String,
+      default: 'navigate'
+    },
+    url: {
+      type: String,
+      default: ''
+    },
+    hoverClass: {
+      type: String,
+      default: ''
+    },
+    hoverStartTime: {
+      type: Number,
+      default: 50
+    },
+    hoverStayTime: {
+      type: Number,
+      default: 600
+    },
+    appId: {
+      type: String,
+      default: ''
+    },
+    path: {
+      type: String,
+      default: ''
+    },
+    extraData: {
+      type: Object,
+      default: {}
+    },
+    cstyle: {
+      type: String,
+      default: ''
+    }
+  }
+
+  data = {
+  }
+
+  computed = {
+  }
+
+  watch = {
+  }
+
+  methods = {
+  }
+
+  beforeCreate() {
+  }
+
+  created() {
+  }
+
+  beforeMount() {
+  }
+
+  mounted() {
+  }
+
+  beforeDestroy() {
+  }
+
+  destroyed() {
+  }
+}
+
+export default new Navigator();
+</script>
+
+<style >
+
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {}
+  }
+}
+</script>

@@ -1,0 +1,52 @@
+<template>
+<page title="navigator演示">
+  <c-header title="navigator"></c-header>
+   
+</page>
+</template>
+<script>
+class MovableView {
+
+  data = {
+    x: 0,
+    y: 0
+  }
+
+  methods = {
+    changeHandler (e) {
+    },
+    htouchmoveHandler (e) {
+    },
+    vtouchmoveHandler (e) {
+    }
+  }
+}
+
+export default new MovableView();
+</script>
+<style scoped>
+.container {
+  position: absolute;
+  top: 88cpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+ .title-text {
+   margin: 30cpx 20cpx;
+   font-size: 32cpx;
+ }
+</style>
+<script cml-type="json">
+{
+    "base": {
+        "usingComponents": {
+          "c-header": "../../components/header/header",
+          "mp-navigator": "/components/mp-navigator/mp-navigator"
+        },
+        "navigationBarTitleText": "radio",
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#E2E2E2"
+    }
+}
+</script>
