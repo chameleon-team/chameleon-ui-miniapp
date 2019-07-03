@@ -7,7 +7,7 @@ COMMENT
 
 # 根目录临时目录名，用完删掉
 NPM_PUBLISH_DIR='.npm_publish'
-NPM_PUBLISH_DIR_SRC='src/api/.'
+NPM_PUBLISH_DIR_SRC='src/components/.'
 
 if [ -e ./${NPM_PUBLISH_DIR} ]; then
 rm -rf ${NPM_PUBLISH_DIR}
