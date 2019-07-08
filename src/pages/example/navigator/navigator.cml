@@ -1,23 +1,75 @@
 <template>
 <page title="navigator演示">
   <c-header title="navigator"></c-header>
-   
+  <view class="navigator-box">
+    <mp-navigator
+      url="/pages/example/movable-view/movable-view"
+      hover-style="color:blue;"
+      open-type="navigate"
+    ><text>跳转到新页面</text></mp-navigator>
+  </view>
+  <view class="navigator-box">
+    <mp-navigator
+      url="/pages/example/movable-view/movable-view"
+      hover-style="color:blue;"
+      open-type="navigate"
+    ><button text="跳转到新页面"></button>
+    </mp-navigator>
+  </view>
+  <view class="navigator-box">
+    <mp-navigator
+      url="/pages/example/movable-view/movable-view"
+      hover-style="color:blue;"
+      open-type="redirect"
+    >在当前页打开</mp-navigator>
+  </view>
+  <view class="navigator-box">
+    <mp-navigator
+      url="/pages/example/movable-view/movable-view"
+      hover-style="color:blue;"
+      open-type="navigate"
+    ><text>跳转到新页面</text></mp-navigator>
+  </view>
+  <view class="navigator-box">
+    <mp-navigator
+      url="/pages/example/movable-view/movable-view"
+      hover-style="color:blue;"
+      open-type="reLaunch"
+    >关闭所有页面，打开到新页面</mp-navigator>
+  </view>
+  <view class="navigator-box">
+    <mp-navigator
+      hover-style="color:blue;"
+      appId="wxaf35009675aa0b2a"
+      target="miniProgram"
+      path="pages/alift/login"
+      extra-data="{{ extraData }}"
+      open-type="navigate"
+      c-bind:success="onSuccess"
+      c-bind:fail="onFail"
+      c-bind:complete="onComplete"
+    >打开绑定的小程序</mp-navigator>
+  </view>
 </page>
 </template>
 <script>
 class MovableView {
 
   data = {
-    x: 0,
-    y: 0
+    extraData: {
+      isGetLogin: 1
+    }
   }
 
   methods = {
-    changeHandler (e) {
+    onSuccess (e) {
+      console.log('navigateTo success', e.detail);
     },
-    htouchmoveHandler (e) {
+    onFail (e) {
+      console.log('navigateTo fail', e.detail);
     },
-    vtouchmoveHandler (e) {
+    onComplete (e) {
+      console.log('navigateTo complete', e.detail);
     }
   }
 }
@@ -36,6 +88,16 @@ export default new MovableView();
    margin: 30cpx 20cpx;
    font-size: 32cpx;
  }
+
+.navigator-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30cpx;
+}
+.na-hover{
+  color: red;
+}
 </style>
 <script cml-type="json">
 {

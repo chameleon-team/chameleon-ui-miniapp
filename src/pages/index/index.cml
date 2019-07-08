@@ -102,7 +102,7 @@ class Demo {
         name: "开放能力",
         open: false,
         pages: [
-          routeObj["webview"]
+          routeObj["web-view"]
         ],
         src: require(`../../assets/images/form.png`)
       },
@@ -380,7 +380,7 @@ export default new Demo();
     "base": {
         "usingComponents": {
         },
-        "navigationBarTitleText": "内置组件库",
+        "navigationBarTitleText": "小程序组件库",
         "backgroundTextStyle": "dark",
         "backgroundColor": "#E2E2E2"
     }

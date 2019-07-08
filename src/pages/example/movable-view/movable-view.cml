@@ -1,8 +1,6 @@
 <template>
-<c-page title="movable-view演示">
+<page title="movable-view演示">
   <c-header title="movable-view"></c-header>
-  <!-- <movable-area  -->
-    <!-- cstyle="height:200px;width:200px;background:red;"> -->
     <text class="title-text">movable-view区域小于movable-area</text>
     <mp-movable-view 
       cstyle="height:50px;width:50px;background:blue;"
@@ -11,8 +9,6 @@
       y="{{y}}"
       direction="all"
       c-bind:change="changeHandler"
-      c-bind:htouchmove="htouchmoveHandler"
-      c-bind:vtouchmove="vtouchmoveHandler"
     >
     </mp-movable-view>
     <text class="title-text">movable-view区域大于movable-area</text>
@@ -23,8 +19,6 @@
       y="{{y}}"
       direction="all"
       c-bind:change="changeHandler"
-      c-bind:htouchmove="htouchmoveHandler"
-      c-bind:vtouchmove="vtouchmoveHandler"
     >
     </mp-movable-view>
     <text class="title-text">只可以横向移动</text>
@@ -35,8 +29,6 @@
       y="{{y}}"
       direction="horizontal"
       c-bind:change="changeHandler"
-      c-bind:htouchmove="htouchmoveHandler"
-      c-bind:vtouchmove="vtouchmoveHandler"
     >
     </mp-movable-view>
     <text class="title-text">只可以竖向移动</text>
@@ -47,12 +39,9 @@
       y="{{y}}"
       direction="vertical"
       c-bind:change="changeHandler"
-      c-bind:htouchmove="htouchmoveHandler"
-      c-bind:vtouchmove="vtouchmoveHandler"
     >
     </mp-movable-view>
-  <!-- </movable-area> -->
-</c-page>
+</page>
 </template>
 <script>
 class MovableView {
@@ -64,11 +53,8 @@ class MovableView {
 
   methods = {
     changeHandler (e) {
+      console.log('change', e.detail);
     },
-    htouchmoveHandler (e) {
-    },
-    vtouchmoveHandler (e) {
-    }
   }
 }
 
@@ -91,7 +77,6 @@ export default new MovableView();
 {
     "base": {
         "usingComponents": {
-          "c-page": "/components/page/page",
           "c-header": "../../components/header/header",
           "mp-movable-view": "/components/mp-movable-view/mp-movable-view"
         },

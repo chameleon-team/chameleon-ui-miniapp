@@ -15,15 +15,15 @@
       "mock": "index.php"
     },
     {
-      "name": "navigator",
-      "url": "/pages/example/navigator/navigator",
-      "path": "/pages/example/navigator/navigator",
+      "name": "web-view",
+      "url": "/pages/example/web-view/web-view",
+      "path": "/pages/example/web-view/web-view",
       "mock": "index.php"
     },
     {
-      "url": "/pages/nav/nav",
-      "path": "/pages/nav/nav",
-      "name": "navigateBack",
+      "name": "navigator",
+      "url": "/pages/example/navigator/navigator",
+      "path": "/pages/example/navigator/navigator",
       "mock": "index.php"
     }
   ]

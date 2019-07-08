@@ -7,8 +7,6 @@
       disabled="{{ disabled }}"
       style="{{cstyle}}"
       onChange="changeHandler"
-      htouchmove="htouchmoveHandler"
-      vtouchmove="vtouchmoveHandler"
     ></origin-movable-view>
   </origin-movable-area>
 </template>
@@ -46,16 +44,7 @@
     }
     methods = {
       changeHandler(e) {
-        console.log('---changeHandler----', e)
-        this.$cmlEmit('change');
-      },
-      htouchmoveHandler (e) {
-        console.log('---htouchmoveHandler----', e)
-        this.$cmlEmit('htouchmove');
-      },
-      vtouchmoveHandler (e) {
-        console.log('---vtouchmoveHandler----', e)
-        this.$cmlEmit('vtouchmove');
+        this.$cmlEmit('change', e.detail);
       }
     }
     mounted () {

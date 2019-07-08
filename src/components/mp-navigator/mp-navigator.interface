@@ -12,10 +12,22 @@
 
 //定义事件detail对象的参数
 type EventDetail = {
-  value: String
+  errMsg: String
 }
 interface NavigatorInterface {
-  name: String,
-  onshow(eventDetail: EventDetail): void;
+  target: String,
+  openType: String,
+  url: String,
+  // hoverClass: String,
+  hoverStartTime: Number,
+  hoverStayTime: Number,
+  hoverStyle: String,
+  appId: String,
+  path: String,
+  extraData: CMLObject,
+  cstyle: String,
+  fail(eventDetail: EventDetail): void;
+  success(eventDetail: EventDetail): void;
+  complete(eventDetail: EventDetail): void;
 }
 </script>

@@ -38,7 +38,10 @@ export default new App();
       "scope.userLocation": {
         "desc": "请求使用你的位置信息"
       }
-    }
+    },
+    "navigateToMiniProgramAppIdList": [
+      "wxaf35009675aa0b2a"
+    ]
   }
 }
 </script>
