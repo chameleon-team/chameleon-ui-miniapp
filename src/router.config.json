@@ -21,6 +21,30 @@
       "mock": "index.php"
     },
     {
+      "name": "icon",
+      "url": "/pages/example/icon/icon",
+      "path": "/pages/example/icon/icon",
+      "mock": "index.php"
+    },
+    {
+      "name": "slider",
+      "url": "/pages/example/slider/slider",
+      "path": "/pages/example/slider/slider",
+      "mock": "index.php"
+    },
+    {
+      "name": "picker",
+      "url": "/pages/example/picker/picker",
+      "path": "/pages/example/picker/picker",
+      "mock": "index.php"
+    },
+    {
+      "name": "progress",
+      "url": "/pages/example/progress/progress",
+      "path": "/pages/example/progress/progress",
+      "mock": "index.php"
+    },
+    {
       "name": "navigator",
       "url": "/pages/example/navigator/navigator",
       "path": "/pages/example/navigator/navigator",
