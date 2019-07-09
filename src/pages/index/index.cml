@@ -66,6 +66,8 @@ class Demo {
         open: false,
         pages: [
           routeObj["toast"],
+          routeObj["dialog"],
+          routeObj["actionsheet"],
           routeObj["progress"],
           routeObj["icon"]
         ],

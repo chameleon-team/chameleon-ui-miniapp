@@ -27,6 +27,18 @@
       "mock": "index.php"
     },
     {
+      "name": "dialog",
+      "url": "/pages/example/dialog/dialog",
+      "path": "/pages/example/dialog/dialog",
+      "mock": "index.php"
+    },
+    {
+      "name": "actionsheet",
+      "url": "/pages/example/actionsheet/actionsheet",
+      "path": "/pages/example/actionsheet/actionsheet",
+      "mock": "index.php"
+    },
+    {
       "name": "navigator",
       "url": "/pages/example/navigator/navigator",
       "path": "/pages/example/navigator/navigator",
