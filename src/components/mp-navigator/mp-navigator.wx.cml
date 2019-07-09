@@ -1,5 +1,5 @@
 <template>
-  <navigator
+  <origin-navigator
     target="{{ target }}"
     open-type="{{ openType }}"
     style="{{ cmtStyle }}"
@@ -10,11 +10,11 @@
     bindsuccess="onSuccess"
     bindfail="onFail"
     bindcomplete="onComplete"
-    c-bind:tap="ontap"
+    bindtap="ontap"
     hover-class="none"
     >
     <slot></slot>
-  </navigator>
+  </origin-navigator>
 </template>
 
 <script>

@@ -65,6 +65,7 @@ class Demo {
         name: "基础内容",
         open: false,
         pages: [
+          routeObj["toast"],
           routeObj["progress"],
           routeObj["icon"]
         ],

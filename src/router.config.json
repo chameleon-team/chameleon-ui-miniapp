@@ -21,6 +21,12 @@
       "mock": "index.php"
     },
     {
+      "name": "toast",
+      "url": "/pages/example/toast/toast",
+      "path": "/pages/example/toast/toast",
+      "mock": "index.php"
+    },
+    {
       "name": "navigator",
       "url": "/pages/example/navigator/navigator",
       "path": "/pages/example/navigator/navigator",

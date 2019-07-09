@@ -1,8 +1,8 @@
 <template>
-  <web-view 
+  <origin-web-view 
     src="{{ src }}"
     bindmessage="onMessage">
-  </web-view>
+  </origin-web-view>
 </template>
 
 <script>
