@@ -39,6 +39,12 @@
       "mock": "index.php"
     },
     {
+      "name": "canvas",
+      "url": "/pages/example/canvas/canvas",
+      "path": "/pages/example/canvas/canvas",
+      "mock": "index.php"
+    },
+    {
       "name": "navigator",
       "url": "/pages/example/navigator/navigator",
       "path": "/pages/example/navigator/navigator",

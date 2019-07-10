@@ -1,0 +1,132 @@
+<template>
+<page title="canvas演示">
+  <c-header title="canvas"></c-header>
+  <view class="canvas-box">
+    <mp-canvas
+        cid="mycanvas"
+        cstyle="background-color:#fff;"
+        width="{{ 610 }}"
+        height="{{ 610 }}"
+        cclass="canvas_ex"
+        c-bind:getcontext="getContext"
+    ></mp-canvas>
+  </view>
+</page>
+</template>
+<script>
+import cml from '@didi/chameleon-api';
+import miniCml from '@didi/chameleon-api-miniapp';
+
+class CCanvas {
+  data = {
+    interval: 0,
+    position: {
+      x: 150,
+      y: 150,
+      vx: 2,
+      vy: 2
+    }
+  }
+
+  computed = {
+  }
+
+  watch  = {
+  }
+
+  methods = {
+    getContext(e) {
+      if (e.detail.context) {
+        this.drawBall(e.detail.context);
+        clearInterval(this.interval)
+        this.interval = setInterval(() => {
+          this.drawBall.call(this, e.detail.context);
+        }, 17)
+      }
+    },
+    drawBall (context) {
+      var p = this.position
+      p.x += p.vx
+      p.y += p.vy
+      if (p.x >= 300) {
+        p.vx = -2
+      }
+      if (p.x <= 7) {
+        p.vx = 2
+      }
+      if (p.y >= 300) {
+        p.vy = -2
+      }
+      if (p.y <= 7) {
+        p.vy = 2
+      }
+      function ball(x, y) {
+        context.beginPath(0)
+        context.arc(x, y, 5, 0, Math.PI * 2)
+        context.setFillStyle('#1aad19')
+        context.setStrokeStyle('rgba(1,1,1,0)')
+        context.fill()
+        context.stroke()
+      }
+
+      ball(p.x, 150)
+      ball(150, p.y)
+      ball(300 - p.x, 150)
+      ball(150, 300 - p.y)
+      ball(p.x, p.y)
+      ball(300 - p.x, 300 - p.y)
+      ball(p.x, 300 - p.y)
+      ball(300 - p.x, p.y)
+
+      context.draw()
+    }
+  }
+
+  beforeCreate() {
+  }
+
+  created() {
+    
+  }
+
+  beforeMount() {
+  }
+
+  mounted() {
+    console.log(this)
+  }
+
+  beforeDestroy() {
+  }
+
+  destroyed() {
+    clearInterval(this.interval)
+  }
+}
+
+export default new CCanvas();
+</script>
+<style scoped>
+.canvas-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
+<script cml-type="json">
+{
+    "base": {
+        "usingComponents": {
+            "c-header": "../../components/header/header",
+            "mp-canvas": "/components/mp-canvas/mp-canvas"
+        }
+    },
+    "wx": {
+        "navigationBarTitleText": "index",
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#E2E2E2"
+
+    }
+}
+</script>
