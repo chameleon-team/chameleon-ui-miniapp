@@ -96,7 +96,8 @@ class Demo {
         name: "表单组件",
         open: false,
         pages: [
-          routeObj["slider"]
+          routeObj["slider"],
+          routeObj["picker"]
         ],
         src: require(`../../assets/images/form.png`)
       },
