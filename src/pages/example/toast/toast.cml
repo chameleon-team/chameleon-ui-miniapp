@@ -8,7 +8,7 @@
     icon="{{icon}}"
     c-bind:changeshow="onchangeShow"
   ></mp-toast>
-  <button class="btn" c-bind:onclick="showLoading" text="loading toast"></button>
+  <!--<button class="btn" c-bind:onclick="showLoading" text="loading toast"></button>-->
   <button class="btn" c-bind:onclick="showTextLoading" text="loading text toast"></button>
   <button class="btn" c-bind:onclick="showSuccess" text="success toast"></button>
   <button class="btn" c-bind:onclick="showText" text="toast without icon"></button>
