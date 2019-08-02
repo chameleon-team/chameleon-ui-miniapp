@@ -23,7 +23,6 @@
     "@didi/chameleon-store": "^1.1.0",
     "@didi/chameleon-ui": "^1.6.1",
     "@didi/chameleon-ui-builtin": "^2.6.1",
-    "chameleon-ui-builtin": "0.4.0",
     "fs-extra": "^7.0.1"
   }
 }
