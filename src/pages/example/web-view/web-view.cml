@@ -1,7 +1,7 @@
 <template>
 <page title="webview演示">
   <c-header title="webview"></c-header>
-  <mp-web-view src="https://cmljs.org/#/"></mp-web-view>
+  <mp-web-view src="https://cmljs.org/cml-demo/dist/web/cml-demo.html#/"></mp-web-view>
 </page>
 </template>
 <script>
