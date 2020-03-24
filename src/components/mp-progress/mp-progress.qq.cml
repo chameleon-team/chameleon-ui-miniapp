@@ -9,7 +9,7 @@
   ></origin-progress>
 </template>
 <script>
-  import cml from '@didi/chameleon-api'
+  import cml from 'chameleon-api'
   class Progress implements ProgressInterface {
     props = {
       //all、vertical、horizontal、none

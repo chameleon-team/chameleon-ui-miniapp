@@ -11,7 +11,7 @@
   </origin-movable-area>
 </template>
 <script>
-  import cml from '@didi/chameleon-api'
+  import cml from 'chameleon-api'
   class MovableView implements MovableViewInterface {
     props = {
       //all、vertical、horizontal、none
